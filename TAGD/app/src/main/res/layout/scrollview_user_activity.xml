@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="1500sp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:background="@color/backgroundGrey" android:layout_height="1000sp">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            app:srcCompat="@mipmap/ic_launcher"
+            android:id="@+id/imageGamerPic"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"/>
+        <TextView
+            android:text="G:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtGSDisplay"
+            android:layout_marginBottom="34dp"
+            android:layout_marginStart="8dp"
+            android:layout_alignBottom="@+id/imageGamerPic"
+            android:layout_toEndOf="@+id/imageGamerPic" android:textColor="@color/white"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtGTDisplay"
+            android:textSize="28sp"
+            android:layout_above="@+id/txtGSDisplay"
+            android:layout_alignStart="@+id/txtGSDisplay" android:textColor="@color/lightGreen"
+            android:hint="Gamertag"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/EditCommentLayout"
+            android:layout_below="@+id/imageGamerPic" android:layout_alignParentStart="true"
+            android:layout_marginTop="16dp">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:inputType="textMultiLine"
+                android:ems="10"
+                android:id="@+id/editComment"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true"
+                android:textAlignment="textStart" android:layout_height="wrap_content"
+                android:textColor="@color/darkGrey"
+                android:padding="10dp" android:textStyle="normal|italic" android:textSize="20sp"
+                android:hint="Comment"
+                android:background="@drawable/textfield_shape_whiteandgreen"
+                android:textColorHint="@android:color/darker_gray"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/editGameName"
+                android:layout_marginTop="17dp"
+                android:layout_below="@+id/editComment" android:layout_alignParentStart="true"
+                android:textColor="@color/darkGrey" android:background="@drawable/textfield_shape_whiteandgreen"
+                android:padding="10dp" android:textStyle="normal|italic" android:textSize="20sp"
+                android:textAlignment="textStart" android:hint="Game Title"
+                android:textColorHint="@android:color/darker_gray"/>
+            <Button
+                android:text="Submit"
+                android:layout_height="55dp" android:id="@+id/btnSubmitCom"
+                android:layout_marginTop="17dp"
+                android:textColor="@color/white" android:background="@drawable/buttonshape3"
+                android:layout_below="@+id/editGameName" android:layout_alignParentEnd="true"
+                android:layout_width="100dp"/>
+            <Button
+                android:text="TAG"
+                android:layout_height="55dp" android:layout_alignBottom="@+id/btnSubmitCom"
+                android:layout_toStartOf="@+id/btnSubmitCom" android:layout_marginEnd="12dp"
+                android:id="@+id/btnTAG" android:background="@drawable/buttonshape3"
+                android:layout_width="70dp"
+                android:textColor="@color/white"/>
+            <TextView
+                android:layout_height="55dp"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/txtEnterTAG" android:layout_alignBottom="@+id/btnTAG"
+                android:layout_alignParentStart="true"
+                android:background="@drawable/textfield_shape_whiteandgreen" android:textColor="@color/darkGrey"
+                android:padding="10dp" android:textAlignment="center" android:layout_width="190dp"
+                android:textStyle="normal|italic" android:textSize="20sp"
+                android:textColorHint="@android:color/darker_gray" android:hint="@string/hashtag"
+                android:editable="false"/>
+        </RelativeLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView4"
+            android:layout_marginStart="6dp" android:layout_below="@+id/txtGTDisplay"
+            android:layout_toEndOf="@+id/txtGSDisplay" android:textColor="@color/white"
+            android:hint="Gamerscore" android:textColorHint="@color/white"/>
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:id="@+id/container" android:layout_height="125dp"
+            android:layout_marginLeft="10sp" android:layout_marginRight="10sp"
+            android:layout_marginTop="10dp" android:layout_below="@+id/EditCommentLayout"
+            android:layout_centerHorizontal="true">
+
+        </FrameLayout>
+        <Button
+            android:text="See All Comments"
+            android:layout_width="match_parent"
+            android:layout_height="55dp" android:id="@+id/btnSeeAllCom"
+            android:background="@drawable/buttonshape3"
+            android:textColor="@color/white"
+            android:layout_marginTop="39dp"
+            android:layout_below="@+id/container" android:layout_alignParentEnd="true"/>
+    </RelativeLayout>
+
+
+</ScrollView>

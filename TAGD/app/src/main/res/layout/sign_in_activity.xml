@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" android:animationCache="false"
+                android:background="#3a3a3a">
+
+    <TextView
+        android:text="@string/signIn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="19dp"
+        android:id="@+id/textSignIn"
+        android:textSize="36dp"
+        android:textColor="@android:color/darker_gray"/>
+    <TextView
+        android:text="@string/enterGT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textEnterGamertag"
+        android:layout_below="@+id/editTextGamertag"
+        android:layout_alignStart="@+id/editTextGamertag"
+        android:textColor="@android:color/darker_gray"
+        android:paddingTop="7dp"
+        android:layout_marginBottom="30dp"/>
+    <EditText
+        android:inputType="textPassword"
+        android:ems="10"
+        android:id="@+id/editTextPassword"
+        android:layout_below="@+id/textEnterGamertag"
+        android:layout_alignStart="@+id/textEnterGamertag"
+        android:layout_width="380dp"
+        android:background="@drawable/textfield_shape_greyandgreen"
+        android:textSize="32sp"
+        android:layout_height="55dp" android:textAlignment="center"/>
+    <TextView
+        android:text="@string/enterPW"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editTextPassword"
+        android:layout_alignStart="@+id/editTextPassword"
+        android:id="@+id/textEnterPassword"
+        android:textColor="@android:color/darker_gray"
+        android:layout_alignEnd="@+id/textEnterGamertag"
+        android:paddingTop="7dp"/>
+    <EditText
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/editTextGamertag"
+        android:textSize="32sp"
+        android:textStyle="normal|italic" android:background="@drawable/textfield_shape_greyandgreen"
+        android:textColor="#0f0f0f"
+        android:layout_marginTop="31dp"
+        android:layout_width="380dp"
+        android:layout_height="55dp"
+        android:layout_below="@+id/textSignIn" android:layout_centerHorizontal="true"
+        android:textAlignment="center"/>
+    <Button
+        android:text="@string/signInButton"
+        android:layout_height="55sp" android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" android:layout_marginBottom="96dp"
+        android:id="@+id/btnGetStarted" android:textAlignment="center"
+        android:textAllCaps="false" android:layout_width="175dp" android:background="@drawable/buttonshape3"
+        android:textColor="@color/white" android:visibility="visible"/>
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="18dp"
+        android:id="@+id/agreeToTerms" android:text="@string/agreeToTerms"
+        android:textColor="@android:color/darker_gray" android:checked="true"
+        android:layout_alignParentBottom="true" android:layout_centerHorizontal="true"/>
+    <CheckBox
+        android:text="@string/keepSigned"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/keepMeSignedIn" android:checked="true"
+        android:textColor="@android:color/darker_gray"
+        android:layout_above="@+id/agreeToTerms" android:layout_alignStart="@+id/agreeToTerms"/>
+    <TextView
+        android:text="Attempts |"
+        android:layout_width="175dp"
+        android:layout_height="wrap_content" android:layout_below="@+id/textEnterPassword"
+        android:layout_centerHorizontal="true" android:layout_marginTop="31dp"
+        android:id="@+id/attemptText" android:textSize="24sp"
+        android:background="@drawable/buttonshape3" android:padding="15sp"
+        android:textColor="@color/white"/>
+    <TextView
+        android:text="3"
+        android:id="@+id/attemptsNum"
+        android:textSize="32sp" android:padding="3dp" android:textAlignment="center"
+        android:textColor="@color/lightGreen"
+        android:layout_width="50sp"
+        android:layout_height="50sp"
+        android:layout_alignBaseline="@+id/attemptText"
+        android:layout_alignBottom="@+id/attemptText" android:layout_alignEnd="@+id/attemptText"/>
+</RelativeLayout>
